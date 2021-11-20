@@ -48,7 +48,7 @@ exports.getBootcamps = asyncHandler(async (req, res, next) => {
 
     // Pagination
     const page = parseInt(req.query.page, 10) || 1; // default will be 1 if page is not given in query
-    const limit = parseInt(req.query.limit, 10) || 25; // default will be 2 if limit is not given in query
+    const limit = parseInt(req.query.limit, 10) || 25; // default will be 25 if limit is not given in query
     // const limit = parseInt(req.query.limit, 10) || 1; // for testing purpose
     const startIndex = (page - 1) * limit;
     const endIndex = page * limit;
